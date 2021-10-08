@@ -19,9 +19,11 @@ async def start(bot, message):
 	await message.reply(text, quote=True)
 
 @bot.on_message(filters.new_chat_members)
-async def welcome(bot, message):
+async def welcome(bot, new_chat_members):
 	
-
-try: new_chat_members.kick()
+try:		
+     await new_chat_members.kick()	
+except:		
+       return
 	
 bot.run()
