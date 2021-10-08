@@ -22,6 +22,6 @@ async def start(bot, message):
 async def welcome(bot, message):
 	
 
-try: chat.kick_member(user_id)
+try: member.kick()
 	
 bot.run()
