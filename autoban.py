@@ -20,10 +20,8 @@ async def start(bot, message):
 
 @bot.on_message(filters.new_chat_members)
 async def welcome(bot, new_chat_members):
-	
-try:		
+		
      await new_chat_members.kick()	
-except:		
-       return
+
 	
 bot.run()
