@@ -7,7 +7,7 @@ API_ID = int(os.environ.get("API_ID", 8451490))
 API_HASH = os.environ.get("API_HASH", "")
 
 bot = Client(
-        "hide",
+        "ban",
         bot_token=BOT_TOKEN,
 	api_hash=API_HASH,
         api_id=API_ID
