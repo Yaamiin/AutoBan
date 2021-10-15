@@ -1,13 +1,13 @@
-from pyrogram import Client, filters
+from pyrogram import Client as Bot, filters
 from pyrogram.types import Message, User
 from config import API_ID, API_HASH, BOT_TOKEN
 
-bot = Client(
-        ':ban:',
-	API_ID,
-	API_HASH,
-	bot_token=BOT_TOKEN,
-    )
+Bot(
+    ':ban:',
+    API_ID,
+    API_HASH,
+    bot_token=BOT_TOKEN,
+).start()
 
 @bot.on_message(filters.command('start'))
 async def start(bot, message):
@@ -23,5 +23,5 @@ async def kick(bot, new_chat_members):
 	except Expection as e
 	print(e)
 
-bot.start()	
-bot.run()
+	
+run()
