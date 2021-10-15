@@ -1,15 +1,10 @@
-import os
 from pyrogram import Client, filters
 from pyrogram.types import Message, User
 
-BOT_TOKEN = os.environ.get("BOT_TOKEN")
-API_ID = int(os.environ.get("API_ID", ""))
-API_HASH = os.environ.get("API_HASH")
-
 bot = Client(
         ":ban:",
+	API_ID,
 	API_HASH,
-        API_ID,
 	bot_token=BOT_TOKEN,
     )
 
