@@ -1,2 +1,2 @@
-pyrogram
-cryptg
+git+https://github.com/pyrogram/pyrogram/pyrogram@master
+tgcrypto
