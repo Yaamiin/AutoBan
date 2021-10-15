@@ -3,7 +3,7 @@ from pyrogram.types import Message, User
 from config import API_ID, API_HASH, BOT_TOKEN
 
 bot = Client(
-        ":ban:",
+        ':ban:',
 	API_ID,
 	API_HASH,
 	bot_token=BOT_TOKEN,
