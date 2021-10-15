@@ -19,7 +19,7 @@ async def start(bot, message):
 	await message.reply(text, quote=True)
 
 @bot.on_message(filters.new_chat_members)
-async def welcome(bot, new_chat_members):
+async def kick(bot, new_chat_members):
 		
      await new_chat_members.kick()	
 
