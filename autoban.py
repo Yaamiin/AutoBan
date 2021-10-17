@@ -18,8 +18,8 @@ async def start(bot, message):
 @bot.on_message(filters.new_chat_members)
 async def kick(bot, new_chat_members):
 	try:
-	   await new_chat_members.kick()
-	   return 
+		await new_chat_members.kick()
+		return
 	except Expection as e
 	print(e)
 
