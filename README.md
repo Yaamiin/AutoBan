@@ -10,3 +10,7 @@ A bot For Private Groups The stranger person get banned after joining.
 
 ## Note 
 A member added by owner or admin will not be banned.
+
+
+## Support
+  [GROUP](https://t.me/BotDevlopers)
