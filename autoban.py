@@ -20,7 +20,7 @@ async def kick(bot, new_chat_members):
 	try:
 		await new_chat_members.kick()
 		return
-	except Expection as e:
+	except Exception as e:
 	        
                 print(e)
 
