@@ -1,3 +1,4 @@
+import asyncio
 from pyrogram import Client as Bot, filters, idle
 from pyrogram.types import Message, User
 from config import API_ID, API_HASH, BOT_TOKEN
@@ -16,9 +17,11 @@ async def start(bot, message):
 	return
 
 @bot.on_message(filters.new_chat_members)
-async def kick(bot, new_chat_members):
+async def kick(bot, m: Message):
 	try:
-		await new_chat_members.kick()
+		await bot.kick_chat_member(m.chat.id, m.from_user.id)
+                await asyncio.sleep(2)
+                await bot.unban_chat_member(m.chat.id, m.from_user.id)
 		return
 	except Exception as e:
 	        
