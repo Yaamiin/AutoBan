@@ -1,13 +1,13 @@
-from pyrogram import Client as Bot, filters
+from pyrogram import Client as Bot, filters, idle
 from pyrogram.types import Message, User
 from config import API_ID, API_HASH, BOT_TOKEN
 
-Bot(
+bot = Bot(
     ':ban:',
     API_ID,
     API_HASH,
     bot_token=BOT_TOKEN,
-).start()
+)
 
 @bot.on_message(filters.command('start'))
 async def start(bot, message):
@@ -25,4 +25,5 @@ async def kick(bot, new_chat_members):
                 print(e)
 
 	
-run()
+bot.start()
+idle()
