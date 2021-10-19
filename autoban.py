@@ -12,20 +12,19 @@ bot = Bot(
 
 @bot.on_message(filters.command('start'))
 async def start(bot, message):
-	text = 'Hey, I am Autoban Bot'
-	await message.reply(text, quote=True)
-	return
+    text = 'Hey, I am Autoban Bot'
+    await message.reply(text, quote=True)
+    return
 
 @bot.on_message(filters.new_chat_members)
 async def kick(bot, m: Message):
-	try:
-		await bot.kick_chat_member(m.chat.id, m.from_user.id)
-                await asyncio.sleep(2)
-                await bot.unban_chat_member(m.chat.id, m.from_user.id)
-		return
-	except Exception as e:
-	        
-                print(e)
+    try:
+        await bot.kick_chat_member(m.chat.id, m.from_user.id)
+        await asyncio.sleep(2)
+        await bot.unban_chat_member(m.chat.id, m.from_user.id)
+        return
+    except Exception as e:
+        print(e)
 
 	
 bot.start()
