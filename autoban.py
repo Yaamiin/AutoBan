@@ -12,7 +12,7 @@ bot = Bot(
 
 @bot.on_message(filters.command('start'))
 async def start(bot, message):
-    text = 'Hey, I am Autoban Bot'
+    text = 'Hey, I am Autoban Bot \n\n I Can Ban a Member After Joining The group. \n\n 📖 Note - Added Member will not be banned. \n\n ⚠️Warning- My use is for personal Groups.\n\n ©️ @sillybots'
     await message.reply(text, quote=True)
     return
 
