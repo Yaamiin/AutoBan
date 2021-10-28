@@ -21,7 +21,7 @@ async def kick(bot, m: Message):
     try:
         await bot.kick_chat_member(m.chat.id, m.from_user.id)
         await asyncio.sleep(2)
-        await bot.kick_chat_member(m.chat.id, m.from_user.id)
+        await unban.kick_chat_member(m.chat.id, m.from_user.id)
         return
     except Exception as e:
         print(e)
